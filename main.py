@@ -11,12 +11,27 @@ def main():
     os.makedirs("reports", exist_ok=True)
     
     file_path = input("Enter CSV file path: ")
-    target_column = input("Enter target column name: ")
     
     # 1. Data Ingestion
     df = load_csv(file_path)
     if df is None:
         return
+    
+    # Clean column names (remove extra spaces)
+    df.columns = df.columns.str.strip()
+    
+    # Show available columns
+    print("\n✅ Available columns in dataset:")
+    print(df.columns.tolist())
+    
+    target_column = input("\nEnter target column name (choose from above): ").strip()
+    
+    # Validate target column
+    matched_cols = [col for col in df.columns if col.lower() == target_column.lower()]
+    if not matched_cols:
+        print(f"❌ Error: Column '{target_column}' not found. Please choose from the list above.")
+        return
+    target_column = matched_cols[0]  # use correct name from df
     
     # 2. EDA
     perform_eda(df)
