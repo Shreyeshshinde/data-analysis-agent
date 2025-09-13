@@ -1,7 +1,8 @@
-def output_dashboard():
-    """
-    Final dashboard info
-    """
-    print("\nAll reports saved in './reports' folder.")
-    print("Best model saved as 'models/best_model.pkl'.")
-    print("You can now load this model for predictions.")
+# modules/output_layer.py
+import streamlit as st
+
+def output_dashboard_streamlit():
+    st.header("📦 Output Summary")
+    st.write("- Best model saved in `models/best_model.pkl`")
+    st.write("- Report images (if any) are in `reports/`")
+    st.info("You can extend this panel to serve predictions or add model explainability charts.")

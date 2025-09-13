@@ -1,45 +1,54 @@
+# modules/eda.py
+import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-def perform_eda(df):
-    """
-    Exploratory Data Analysis: basic stats, missing values, correlations,
-    and visualizations by species.
-    """
-    # Basic stats
-    print("\n----- Basic Stats -----")
-    print(df.describe(include='all'))
-    
+def perform_eda_streamlit(df, target_column):
+    st.write("### Dataset Summary")
+    st.write(df.describe(include="all").T)
+
     # Missing values
-    print("\n----- Missing Values -----")
-    print(df.isnull().sum())
-    
-    # Correlation heatmap for numeric columns only
-    numeric_cols = df.select_dtypes(include='number').columns
+    st.write("### Missing values (post-preprocessing check)")
+    ms = df.isnull().sum()
+    if (ms > 0).any():
+        st.dataframe(ms[ms > 0])
+    else:
+        st.success("✅ No missing values detected")
+
+    # Correlation heatmap (numeric only)
+    numeric_df = df.select_dtypes(include=["number"])
+    if not numeric_df.empty:
+        st.write("### Correlation heatmap (numeric features)")
+        fig, ax = plt.subplots(figsize=(10, 6))
+        sns.heatmap(numeric_df.corr(), annot=True, cmap="coolwarm", ax=ax)
+        st.pyplot(fig)
+    else:
+        st.info("No numeric features for correlation heatmap.")
+
+    # Target distribution
+    if target_column in df.columns:
+        st.write(f"### Distribution of target: {target_column}")
+        fig2, ax2 = plt.subplots(figsize=(8, 4))
+        if df[target_column].dtype == "object" or str(df[target_column].dtype).startswith("category"):
+            sns.countplot(x=df[target_column], ax=ax2)  # ✅ fixed
+            ax2.set_xticklabels(ax2.get_xticklabels(), rotation=45, ha="right")
+        else:
+            sns.histplot(df[target_column], kde=True, ax=ax2)
+        st.pyplot(fig2)
+    else:
+        st.error(f"❌ Target column '{target_column}' not found in dataset")
+
+    # Pairplot sample (avoid huge datasets)
+    st.write("### Pairwise sample (first 6 numeric features)")
+    numeric_cols = numeric_df.columns.tolist()[:6]
     if len(numeric_cols) > 1:
-        plt.figure(figsize=(10, 6))
-        sns.heatmap(df[numeric_cols].corr(), annot=True, cmap='coolwarm')
-        plt.title("Correlation Matrix (Numeric Features)")
-        plt.show()
-    
-    # Pairplot colored by Species if exists
-    if 'Species' in df.columns:
-        numeric_cols_for_pairplot = df.select_dtypes(include='number').columns
-        sns.pairplot(df[numeric_cols_for_pairplot.tolist() + ['Species']], hue='Species')
-        plt.show()
-    
-    # Boxplots for each numeric feature by species
-    if 'Species' in df.columns:
-        for col in numeric_cols:
-            plt.figure(figsize=(8, 4))
-            sns.boxplot(x='Species', y=col, data=df)
-            plt.title(f'{col} distribution by Species')
-            plt.show()
-    
-    # Distribution plots for numeric features
-    for col in numeric_cols:
-        plt.figure(figsize=(8, 4))
-        sns.histplot(df[col], kde=True, bins=20)
-        plt.title(f'Distribution of {col}')
-        plt.show()
+        try:
+            sample = df[numeric_cols].sample(min(200, len(df)))
+            pp = sns.pairplot(sample)
+            st.pyplot(pp.fig)
+            plt.close(pp.fig)
+        except Exception:
+            st.info("⚠️ Pairplot skipped due to size or plotting issues.")
+    else:
+        st.info("Not enough numeric columns for pairplot.")

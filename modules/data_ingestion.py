@@ -1,13 +1,23 @@
 import pandas as pd
+import streamlit as st
 
-def load_csv(file_path):
-    """
-    Load CSV file and validate
-    """
+def load_csv(uploaded_file):
+    """Loads a CSV file into a pandas DataFrame."""
     try:
-        df = pd.read_csv(file_path)
-        print(f"CSV loaded successfully with shape: {df.shape}")
+        # ✅ Removed unsupported "errors" argument
+        df = pd.read_csv(uploaded_file)
+
+        # Strip column names
+        df.columns = df.columns.astype(str).str.strip()
+        st.success("✅ Dataset loaded successfully.")
         return df
+
+    except pd.errors.EmptyDataError:
+        st.error("❌ The file is empty.")
+        return None
+    except pd.errors.ParserError:
+        st.error("❌ Parsing error: Check if the file is a valid CSV.")
+        return None
     except Exception as e:
-        print(f"Error loading CSV: {e}")
+        st.error(f"❌ Error loading CSV: {e}")
         return None
