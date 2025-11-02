@@ -1,151 +1,118 @@
+# modules/autolm_sklearn.py
+
 import streamlit as st
 import pandas as pd
 import numpy as np
+import time
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import accuracy_score, r2_score
 from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.ensemble import (
-    RandomForestClassifier, GradientBoostingClassifier,
-    RandomForestRegressor, GradientBoostingRegressor
-)
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, GradientBoostingClassifier, GradientBoostingRegressor
 from sklearn.svm import SVC, SVR
-from sklearn.preprocessing import LabelEncoder
 import joblib
 import os
 
-
 def automl_task_streamlit(X, y):
     """
-    AutoML with GridSearchCV for both Classification and Regression.
-    Returns best model and leaderboard dataframe.
+    Runs a simple AutoML loop with multiple models.
+    Supports both regression and classification tasks.
+    Returns:
+        best_model: trained model
+        leaderboard_df: pandas dataframe of results
+        training_history: dictionary of model training progress
     """
 
-    # Detect problem type
-    problem_type = "classification"
-    if np.issubdtype(y.dtype, np.number) and len(np.unique(y)) > 10:
-        problem_type = "regression"
+    # Detect task type
+    task_type = "classification" if y.nunique() < 20 and y.dtype != float else "regression"
+    st.write(f"🔍 Detected Task: **{task_type.upper()}**")
 
-    st.write(f"🔍 Detected Task: **{problem_type.upper()}**")
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # Encode target if categorical
-    if problem_type == "classification" and (y.dtype == "object" or str(y.dtype).startswith("category")):
-        le = LabelEncoder()
-        y = le.fit_transform(y)
-
-    # Split dataset
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
-    )
-
-    # Define models
-    if problem_type == "classification":
-        models = {
-            "LogisticRegression": LogisticRegression(max_iter=500),
-            "RandomForestClassifier": RandomForestClassifier(),
-            "GradientBoostingClassifier": GradientBoostingClassifier(),
-            "SVC": SVC()
-        }
-
-        param_grids = {
-            "LogisticRegression": {
-                "C": [0.1, 1, 10],
-                "solver": ["lbfgs", "liblinear"]
-            },
-            "RandomForestClassifier": {
-                "n_estimators": [50, 100, 200],
-                "max_depth": [None, 5, 10],
-                "min_samples_split": [2, 5, 10]
-            },
-            "GradientBoostingClassifier": {
-                "n_estimators": [100, 200],
-                "learning_rate": [0.01, 0.1, 0.2],
-                "max_depth": [3, 5, 7]
-            },
-            "SVC": {
-                "C": [0.1, 1, 10],
-                "kernel": ["linear", "rbf", "poly"],
-                "gamma": ["scale", "auto"]
-            }
-        }
-
-    else:  # regression
-        models = {
-            "LinearRegression": LinearRegression(),
-            "RandomForestRegressor": RandomForestRegressor(),
-            "GradientBoostingRegressor": GradientBoostingRegressor(),
-            "SVR": SVR()
-        }
-
-        param_grids = {
-            "LinearRegression": {},  # no hyperparams
-            "RandomForestRegressor": {
-                "n_estimators": [50, 100, 200],
-                "max_depth": [None, 5, 10],
-                "min_samples_split": [2, 5, 10]
-            },
-            "GradientBoostingRegressor": {
-                "n_estimators": [100, 200],
-                "learning_rate": [0.01, 0.1, 0.2],
-                "max_depth": [3, 5, 7]
-            },
-            "SVR": {
-                "C": [0.1, 1, 10],
-                "kernel": ["linear", "rbf", "poly"],
-                "gamma": ["scale", "auto"]
-            }
-        }
+    models = []
+    if task_type == "classification":
+        models = [
+            ("LogisticRegression", LogisticRegression(max_iter=500)),
+            ("RandomForestClassifier", RandomForestClassifier()),
+            ("GradientBoostingClassifier", GradientBoostingClassifier()),
+            ("SVC", SVC()),
+        ]
+    else:
+        models = [
+            ("LinearRegression", LinearRegression()),
+            ("RandomForestRegressor", RandomForestRegressor()),
+            ("GradientBoostingRegressor", GradientBoostingRegressor()),
+            ("SVR", SVR()),
+        ]
 
     results = []
-    metric_name = "Accuracy" if problem_type == "classification" else "R2"
+    training_history = {}
 
-    for name, model in models.items():
+    for name, model in models:
+        st.write(f"🔄 Running GridSearch for **{name}**...")
+        time.sleep(0.5)
+
+        # simple param grid for quick testing
+        param_grid = {}
+        if "RandomForest" in name:
+            param_grid = {"n_estimators": [50, 100], "max_depth": [3, 5, None]}
+        elif "GradientBoosting" in name:
+            param_grid = {"n_estimators": [50, 100], "learning_rate": [0.05, 0.1]}
+        elif "SVC" in name:
+            param_grid = {"C": [0.1, 1, 10], "kernel": ["rbf", "linear"]}
+        elif "SVR" in name:
+            param_grid = {"C": [0.1, 1, 10], "kernel": ["rbf", "linear"]}
+
         try:
-            st.write(f"🔄 Running GridSearch for **{name}**...")
-
-            grid = GridSearchCV(
-                estimator=model,
-                param_grid=param_grids.get(name, {}),
-                scoring="accuracy" if problem_type == "classification" else "r2",
-                cv=3,
-                n_jobs=-1
-            )
+            grid = GridSearchCV(model, param_grid, cv=3, n_jobs=-1, verbose=0)
             grid.fit(X_train, y_train)
 
             best_model = grid.best_estimator_
-            preds = best_model.predict(X_test)
 
-            score = (
-                accuracy_score(y_test, preds)
-                if problem_type == "classification"
-                else r2_score(y_test, preds)
-            )
+            y_pred = best_model.predict(X_test)
 
-            results.append({
-                "Model": name,
-                metric_name: score,
-                "BestParams": str(grid.best_params_)  # ✅ FIX applied
-            })
+            if task_type == "classification":
+                score = accuracy_score(y_test, y_pred)
+            else:
+                score = r2_score(y_test, y_pred)
 
-            st.write(f"{name} {metric_name}: {score:.4f} | Best Params: {grid.best_params_}")
+            results.append((name, score))
+            training_history[name] = {
+                "params": grid.best_params_,
+                "score": score,
+                "cv_results": grid.cv_results_
+            }
 
-            # Save best model
-            best_so_far = max([r[metric_name] for r in results]) if results else -np.inf
-            if score == best_so_far:
-                os.makedirs("models", exist_ok=True)
-                joblib.dump(best_model, os.path.join("models", "best_model.pkl"))
+            st.success(f"{name} achieved score: {score:.4f}")
 
         except Exception as e:
             st.error(f"{name} failed: {e}")
+            continue
 
-    if results:
-        leaderboard_df = pd.DataFrame(results).sort_values(
-            by=metric_name, ascending=False
-        ).reset_index(drop=True)
-        best_model = leaderboard_df.iloc[0]["Model"]
+    if not results:
+        st.error("AutoML failed. No successful models.")
+        return None, None, {}
 
-        # 📊 Safe plotting
-        st.bar_chart(leaderboard_df.set_index("Model")[metric_name])
+    # create leaderboard
+    leaderboard_df = pd.DataFrame(results, columns=["Model", "Score"])
+    leaderboard_df = leaderboard_df.sort_values(by="Score", ascending=False).reset_index(drop=True)
 
-        return best_model, leaderboard_df
-    else:
-        return None, None
+    best_model_name = leaderboard_df.iloc[0]["Model"]
+    st.success(f"🏆 Best model: {best_model_name}")
+
+    # retrain best model on full data
+    best_model = None
+    for name, model in models:
+        if name == best_model_name:
+            if "GridSearchCV" in str(type(model)):
+                best_model = model.best_estimator_
+            else:
+                model.fit(X, y)
+                best_model = model
+            break
+
+    # Save model
+    os.makedirs("models", exist_ok=True)
+    joblib.dump(best_model, "models/best_model.pkl")
+
+    return best_model, leaderboard_df, training_history

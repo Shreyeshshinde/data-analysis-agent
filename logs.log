@@ -1,4 +1,4 @@
-2025-09-02 10:17:36,474:WARNING:
+  2025-09-02 10:17:36,474:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
 2025-09-02 10:17:36,474:WARNING:
 'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
@@ -33034,7 +33034,8 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2025-09-08 16:06:53,120:INFO:Checking exceptions
 2025-09-08 16:06:53,126:INFO:Preparing display monitor
 2025-09-08 16:06:53,130:WARNING:
-2025-09-08 16:06:53,130:WARNING:Processing:   0%|                                                                                            | 0/61 [00:00<?, ?it/s]
+2025-09-08 16:06:53,130:WARNING:
+Processing:   0%|                                                                                            | 0/61 [00:00<?, ?it/s]
 2025-09-08 16:06:53,131:WARNING:[A
 2025-09-08 16:06:53,132:INFO:Initializing Logistic Regression
 2025-09-08 16:06:53,132:INFO:Total runtime is 0.0 minutes
@@ -33400,7 +33401,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:06:53,375:INFO:Calculating mean and std
 2025-09-08 16:06:53,376:WARNING:
-2025-09-08 16:06:53,376:WARNING:Processing:   8%|######8                                                                             | 5/61 [00:00<00:02, 20.41it/s]
+2025-09-08 16:06:53,376:WARNING:
+Processing:   8%|######8                                                                             | 5/61 [00:00<00:02, 20.41it/s]
 2025-09-08 16:06:53,376:WARNING:[A
 2025-09-08 16:06:53,376:INFO:Creating metrics dataframe
 2025-09-08 16:06:53,381:INFO:Uploading results into container
@@ -33428,7 +33430,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:06:53,540:INFO:Importing untrained model
 2025-09-08 16:06:53,540:INFO:K Neighbors Classifier Imported successfully
 2025-09-08 16:06:53,541:WARNING:
-2025-09-08 16:06:53,541:WARNING:Processing:  13%|###########                                                                         | 8/61 [00:00<00:02, 19.33it/s]
+2025-09-08 16:06:53,541:WARNING:
+Processing:  13%|###########                                                                         | 8/61 [00:00<00:02, 19.33it/s]
 2025-09-08 16:06:53,541:WARNING:[A
 2025-09-08 16:06:53,542:INFO:Starting cross validation
 2025-09-08 16:06:53,543:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
@@ -33700,7 +33703,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:53,765:INFO:Calculating mean and std
 2025-09-08 16:06:53,765:INFO:Creating metrics dataframe
 2025-09-08 16:06:53,768:WARNING:
-2025-09-08 16:06:53,769:WARNING:Processing:  16%|#############6                                                                     | 10/61 [00:00<00:03, 14.16it/s]
+2025-09-08 16:06:53,769:WARNING:
+Processing:  16%|#############6                                                                     | 10/61 [00:00<00:03, 14.16it/s]
 2025-09-08 16:06:53,769:WARNING:[A
 2025-09-08 16:06:53,769:INFO:Uploading results into container
 2025-09-08 16:06:53,770:INFO:Uploading model into container now
@@ -33725,7 +33729,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:53,923:INFO:Importing untrained model
 2025-09-08 16:06:53,924:INFO:Naive Bayes Imported successfully
 2025-09-08 16:06:53,924:WARNING:
-2025-09-08 16:06:53,924:WARNING:Processing:  20%|################3                                                                  | 12/61 [00:00<00:03, 13.72it/s]
+2025-09-08 16:06:53,924:WARNING:
+Processing:  20%|################3                                                                  | 12/61 [00:00<00:03, 13.72it/s]
 2025-09-08 16:06:53,924:WARNING:[A
 2025-09-08 16:06:53,924:INFO:Starting cross validation
 2025-09-08 16:06:53,925:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
@@ -34035,7 +34040,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:54,192:INFO:Calculating mean and std
 2025-09-08 16:06:54,193:INFO:Creating metrics dataframe
 2025-09-08 16:06:54,196:WARNING:
-2025-09-08 16:06:54,196:WARNING:Processing:  23%|###################                                                                | 14/61 [00:01<00:04, 10.88it/s]
+2025-09-08 16:06:54,196:WARNING:
+Processing:  23%|###################                                                                | 14/61 [00:01<00:04, 10.88it/s]
 2025-09-08 16:06:54,196:WARNING:[A
 2025-09-08 16:06:54,196:INFO:Uploading results into container
 2025-09-08 16:06:54,197:INFO:Uploading model into container now
@@ -34058,7 +34064,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:54,370:INFO:Importing untrained model
 2025-09-08 16:06:54,370:INFO:Decision Tree Classifier Imported successfully
 2025-09-08 16:06:54,370:WARNING:
-2025-09-08 16:06:54,371:WARNING:Processing:  26%|#####################7                                                             | 16/61 [00:01<00:04, 11.06it/s]
+2025-09-08 16:06:54,371:WARNING:
+Processing:  26%|#####################7                                                             | 16/61 [00:01<00:04, 11.06it/s]
 2025-09-08 16:06:54,371:WARNING:[A
 2025-09-08 16:06:54,372:INFO:Starting cross validation
 2025-09-08 16:06:54,373:INFO:Cross validating with StratifiedKFold(n_splits=10, random_state=None, shuffle=False), n_jobs=-1
@@ -34374,7 +34381,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:54,767:INFO:Calculating mean and std
 2025-09-08 16:06:54,767:INFO:Creating metrics dataframe
 2025-09-08 16:06:54,769:WARNING:
-2025-09-08 16:06:54,769:WARNING:Processing:  30%|########################4                                                          | 18/61 [00:01<00:05,  8.11it/s]
+2025-09-08 16:06:54,769:WARNING:
+Processing:  30%|########################4                                                          | 18/61 [00:01<00:05,  8.11it/s]
 2025-09-08 16:06:54,769:WARNING:[A
 2025-09-08 16:06:54,769:INFO:Uploading results into container
 2025-09-08 16:06:54,770:INFO:Uploading model into container now
@@ -34397,7 +34405,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:54,969:INFO:Importing libraries
 2025-09-08 16:06:54,970:INFO:Copying training dataset
 2025-09-08 16:06:55,005:WARNING:
-2025-09-08 16:06:55,017:WARNING:Processing:  31%|#########################8                                                         | 19/61 [00:01<00:06,  6.98it/s]
+2025-09-08 16:06:55,017:WARNING:
+Processing:  31%|#########################8                                                         | 19/61 [00:01<00:06,  6.98it/s]
 2025-09-08 16:06:55,017:WARNING:[A
 2025-09-08 16:06:55,017:INFO:Defining folds
 2025-09-08 16:06:55,032:INFO:Declaring metric variables
@@ -34850,7 +34859,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:06:55,387:INFO:Calculating mean and std
 2025-09-08 16:06:55,388:WARNING:
-2025-09-08 16:06:55,388:WARNING:Processing:  34%|############################5                                                      | 21/61 [00:02<00:06,  6.27it/s]
+2025-09-08 16:06:55,388:WARNING:
+Processing:  34%|############################5                                                      | 21/61 [00:02<00:06,  6.27it/s]
 2025-09-08 16:06:55,388:WARNING:[A
 2025-09-08 16:06:55,388:INFO:Creating metrics dataframe
 2025-09-08 16:06:55,391:INFO:Uploading results into container
@@ -34875,7 +34885,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:06:55,536:INFO:Importing libraries
 2025-09-08 16:06:55,536:INFO:Copying training dataset
 2025-09-08 16:06:55,547:WARNING:
-2025-09-08 16:06:55,547:WARNING:Processing:  38%|###############################2                                                   | 23/61 [00:02<00:05,  7.49it/s]
+2025-09-08 16:06:55,547:WARNING:
+Processing:  38%|###############################2                                                   | 23/61 [00:02<00:05,  7.49it/s]
 2025-09-08 16:06:55,547:WARNING:[A
 2025-09-08 16:06:55,548:INFO:Defining folds
 2025-09-08 16:06:55,548:INFO:Declaring metric variables
@@ -35238,7 +35249,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:06:55,673:INFO:save_model() successfully completed......................................
 2025-09-08 16:06:55,784:INFO:Calculating mean and std
 2025-09-08 16:06:55,927:WARNING:
-2025-09-08 16:06:55,929:WARNING:Processing:  41%|##################################                                                 | 25/61 [00:02<00:05,  6.61it/s]
+2025-09-08 16:06:55,929:WARNING:
+Processing:  41%|##################################                                                 | 25/61 [00:02<00:05,  6.61it/s]
 2025-09-08 16:06:55,929:WARNING:[A
 2025-09-08 16:06:55,931:INFO:Creating metrics dataframe
 2025-09-08 16:06:55,938:INFO:Uploading results into container
@@ -35260,7 +35272,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:06:56,163:INFO:Importing libraries
 2025-09-08 16:06:56,164:INFO:Copying training dataset
 2025-09-08 16:06:56,169:WARNING:
-2025-09-08 16:06:56,169:WARNING:Processing:  44%|####################################7                                              | 27/61 [00:03<00:04,  7.05it/s]
+2025-09-08 16:06:56,169:WARNING:
+Processing:  44%|####################################7                                              | 27/61 [00:03<00:04,  7.05it/s]
 2025-09-08 16:06:56,169:WARNING:[A
 2025-09-08 16:06:56,170:INFO:Defining folds
 2025-09-08 16:06:56,170:INFO:Declaring metric variables
@@ -35567,7 +35580,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:06:56,834:INFO:Calculating mean and std
 2025-09-08 16:06:56,835:WARNING:
-2025-09-08 16:06:56,835:WARNING:Processing:  48%|#######################################4                                           | 29/61 [00:03<00:06,  4.98it/s]
+2025-09-08 16:06:56,835:WARNING:
+Processing:  48%|#######################################4                                           | 29/61 [00:03<00:06,  4.98it/s]
 2025-09-08 16:06:56,835:WARNING:[A
 2025-09-08 16:06:56,835:INFO:Creating metrics dataframe
 2025-09-08 16:06:56,836:INFO:Uploading results into container
@@ -35594,7 +35608,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:06:56,954:INFO:Importing libraries
 2025-09-08 16:06:56,954:INFO:Copying training dataset
 2025-09-08 16:06:56,962:WARNING:
-2025-09-08 16:06:56,962:WARNING:Processing:  51%|##########################################1                                        | 31/61 [00:03<00:04,  6.30it/s]
+2025-09-08 16:06:56,962:WARNING:
+Processing:  51%|##########################################1                                        | 31/61 [00:03<00:04,  6.30it/s]
 2025-09-08 16:06:56,962:WARNING:[A
 2025-09-08 16:06:56,963:INFO:Defining folds
 2025-09-08 16:06:56,963:INFO:Declaring metric variables
@@ -35997,7 +36012,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:06:57,062:INFO:Calculating mean and std
 2025-09-08 16:06:57,062:WARNING:
-2025-09-08 16:06:57,062:WARNING:Processing:  54%|############################################9                                      | 33/61 [00:03<00:03,  7.95it/s]
+2025-09-08 16:06:57,062:WARNING:
+Processing:  54%|############################################9                                      | 33/61 [00:03<00:03,  7.95it/s]
 2025-09-08 16:06:57,062:WARNING:[A
 2025-09-08 16:06:57,062:INFO:Creating metrics dataframe
 2025-09-08 16:06:57,063:INFO:Uploading results into container
@@ -36018,7 +36034,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:06:57,168:INFO:Importing libraries
 2025-09-08 16:06:57,168:INFO:Copying training dataset
 2025-09-08 16:06:57,173:WARNING:
-2025-09-08 16:06:57,174:WARNING:Processing:  57%|###############################################6                                   | 35/61 [00:04<00:02,  9.57it/s]
+2025-09-08 16:06:57,174:WARNING:
+Processing:  57%|###############################################6                                   | 35/61 [00:04<00:02,  9.57it/s]
 2025-09-08 16:06:57,174:WARNING:[A
 2025-09-08 16:06:57,174:INFO:Defining folds
 2025-09-08 16:06:57,174:INFO:Declaring metric variables
@@ -36447,7 +36464,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:06:57,499:INFO:Calculating mean and std
 2025-09-08 16:06:57,499:WARNING:
-2025-09-08 16:06:57,500:WARNING:Processing:  61%|##################################################3                                | 37/61 [00:04<00:02,  8.18it/s]
+2025-09-08 16:06:57,500:WARNING:
+Processing:  61%|##################################################3                                | 37/61 [00:04<00:02,  8.18it/s]
 2025-09-08 16:06:57,500:WARNING:[A
 2025-09-08 16:06:57,500:INFO:Creating metrics dataframe
 2025-09-08 16:06:57,501:INFO:Uploading results into container
@@ -36468,7 +36486,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:06:57,654:INFO:Importing libraries
 2025-09-08 16:06:57,654:INFO:Copying training dataset
 2025-09-08 16:06:57,661:WARNING:
-2025-09-08 16:06:57,662:WARNING:Processing:  64%|#####################################################                              | 39/61 [00:04<00:02,  9.11it/s]
+2025-09-08 16:06:57,662:WARNING:
+Processing:  64%|#####################################################                              | 39/61 [00:04<00:02,  9.11it/s]
 2025-09-08 16:06:57,662:WARNING:[A
 2025-09-08 16:06:57,662:INFO:Defining folds
 2025-09-08 16:06:57,662:INFO:Declaring metric variables
@@ -36858,7 +36877,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:07:00,375:INFO:Calculating mean and std
 2025-09-08 16:07:00,375:WARNING:
-2025-09-08 16:07:00,375:WARNING:Processing:  67%|#######################################################7                           | 41/61 [00:07<00:09,  2.06it/s]
+2025-09-08 16:07:00,375:WARNING:
+Processing:  67%|#######################################################7                           | 41/61 [00:07<00:09,  2.06it/s]
 2025-09-08 16:07:00,375:WARNING:[A
 2025-09-08 16:07:00,375:INFO:Creating metrics dataframe
 2025-09-08 16:07:00,376:INFO:Uploading results into container
@@ -36886,7 +36906,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:07:00,497:INFO:Importing libraries
 2025-09-08 16:07:00,497:INFO:Copying training dataset
 2025-09-08 16:07:00,503:WARNING:
-2025-09-08 16:07:00,503:WARNING:Processing:  70%|##########################################################5                        | 43/61 [00:07<00:06,  2.79it/s]
+2025-09-08 16:07:00,503:WARNING:
+Processing:  70%|##########################################################5                        | 43/61 [00:07<00:06,  2.79it/s]
 2025-09-08 16:07:00,503:WARNING:[A
 2025-09-08 16:07:00,503:INFO:Defining folds
 2025-09-08 16:07:00,504:INFO:Declaring metric variables
@@ -37301,7 +37322,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:07:00,697:INFO:Importing libraries
 2025-09-08 16:07:00,697:INFO:Copying training dataset
 2025-09-08 16:07:00,700:WARNING:
-2025-09-08 16:07:00,701:WARNING:Processing:  77%|###############################################################9                   | 47/61 [00:07<00:03,  4.64it/s]
+2025-09-08 16:07:00,701:WARNING:
+Processing:  77%|###############################################################9                   | 47/61 [00:07<00:03,  4.64it/s]
 2025-09-08 16:07:00,701:WARNING:[A
 2025-09-08 16:07:00,701:INFO:Defining folds
 2025-09-08 16:07:00,701:INFO:Declaring metric variables
@@ -37604,7 +37626,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:07:01,304:INFO:Calculating mean and std
 2025-09-08 16:07:01,304:WARNING:
-2025-09-08 16:07:01,304:WARNING:Processing:  80%|##################################################################6                | 49/61 [00:08<00:02,  4.22it/s]
+2025-09-08 16:07:01,304:WARNING:
+Processing:  80%|##################################################################6                | 49/61 [00:08<00:02,  4.22it/s]
 2025-09-08 16:07:01,304:WARNING:[A
 2025-09-08 16:07:01,304:INFO:Creating metrics dataframe
 2025-09-08 16:07:01,307:INFO:Uploading results into container
@@ -37631,7 +37654,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:07:01,431:INFO:Importing libraries
 2025-09-08 16:07:01,431:INFO:Copying training dataset
 2025-09-08 16:07:01,434:WARNING:
-2025-09-08 16:07:01,435:WARNING:Processing:  84%|#####################################################################3             | 51/61 [00:08<00:01,  5.21it/s]
+2025-09-08 16:07:01,435:WARNING:
+Processing:  84%|#####################################################################3             | 51/61 [00:08<00:01,  5.21it/s]
 2025-09-08 16:07:01,435:WARNING:[A
 2025-09-08 16:07:01,435:INFO:Defining folds
 2025-09-08 16:07:01,435:INFO:Declaring metric variables
@@ -37938,7 +37962,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:07:11,223:INFO:Calculating mean and std
 2025-09-08 16:07:11,224:WARNING:
-2025-09-08 16:07:11,224:WARNING:Processing:  87%|########################################################################1          | 53/61 [00:18<00:11,  1.47s/it]
+2025-09-08 16:07:11,224:WARNING:
+Processing:  87%|########################################################################1          | 53/61 [00:18<00:11,  1.47s/it]
 2025-09-08 16:07:11,224:WARNING:[A
 2025-09-08 16:07:11,224:INFO:Creating metrics dataframe
 2025-09-08 16:07:11,226:INFO:Uploading results into container
@@ -37963,7 +37988,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:07:11,329:INFO:Importing libraries
 2025-09-08 16:07:11,329:INFO:Copying training dataset
 2025-09-08 16:07:11,332:WARNING:
-2025-09-08 16:07:11,332:WARNING:Processing:  90%|##########################################################################8        | 55/61 [00:18<00:06,  1.07s/it]
+2025-09-08 16:07:11,332:WARNING:
+Processing:  90%|##########################################################################8        | 55/61 [00:18<00:06,  1.07s/it]
 2025-09-08 16:07:11,332:WARNING:[A
 2025-09-08 16:07:11,332:INFO:Defining folds
 2025-09-08 16:07:11,332:INFO:Declaring metric variables
@@ -38273,7 +38299,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:07:11,514:INFO:SubProcess create_model() end ==================================
 2025-09-08 16:07:11,514:INFO:Creating metrics dataframe
 2025-09-08 16:07:11,519:WARNING:
-2025-09-08 16:07:11,519:WARNING:Processing:  97%|################################################################################2  | 59/61 [00:18<00:01,  1.62it/s]
+2025-09-08 16:07:11,519:WARNING:
+Processing:  97%|################################################################################2  | 59/61 [00:18<00:01,  1.62it/s]
 2025-09-08 16:07:11,519:WARNING:[A
 2025-09-08 16:07:11,520:WARNING:C:\data_analysis_agent\env\Lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:339: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
   .applymap(highlight_cols, subset=["TT (Sec)"])
@@ -38307,10 +38334,12 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
                        warm_start=False)
 2025-09-08 16:07:11,726:INFO:create_model() successfully completed......................................
 2025-09-08 16:07:11,806:WARNING:
-2025-09-08 16:07:11,807:WARNING:Processing: 100%|###################################################################################| 61/61 [00:18<00:00,  1.99it/s]
+2025-09-08 16:07:11,807:WARNING:
+Processing: 100%|###################################################################################| 61/61 [00:18<00:00,  1.99it/s]
 2025-09-08 16:07:11,807:WARNING:[A
 2025-09-08 16:07:11,807:WARNING:
-2025-09-08 16:07:11,808:WARNING:                                                                                                                                    
+2025-09-08 16:07:11,808:WARNING:
+                                                                                                                                    
 2025-09-08 16:07:11,808:WARNING:[A
 2025-09-08 16:07:11,837:INFO:_master_model_container: 14
 2025-09-08 16:07:11,837:INFO:_display_container: 2
@@ -39289,7 +39318,8 @@ Alternately, you can install this by running `pip install pycaret[models]`
 2025-09-08 16:09:06,745:INFO:ExtraTreesRegressor(n_jobs=-1, random_state=123)
 2025-09-08 16:09:06,745:WARNING:
 2025-09-08 16:09:06,745:INFO:create_model() successfully completed......................................
-2025-09-08 16:09:06,746:WARNING:Processing:   0%|                                                                                            | 0/61 [00:00<?, ?it/s]
+2025-09-08 16:09:06,746:WARNING:
+Processing:   0%|                                                                                            | 0/61 [00:00<?, ?it/s]
 2025-09-08 16:09:06,928:WARNING:[A
 2025-09-08 16:09:06,929:INFO:Initializing Logistic Regression
 2025-09-08 16:09:06,929:INFO:Total runtime is 0.0 minutes
@@ -39732,7 +39762,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:07,135:INFO:save_model() successfully completed......................................
 2025-09-08 16:09:07,422:INFO:Calculating mean and std
 2025-09-08 16:09:07,424:WARNING:
-2025-09-08 16:09:07,424:WARNING:Processing:   8%|######8                                                                             | 5/61 [00:00<00:05, 10.12it/s]
+2025-09-08 16:09:07,424:WARNING:
+Processing:   8%|######8                                                                             | 5/61 [00:00<00:05, 10.12it/s]
 2025-09-08 16:09:07,424:WARNING:[A
 2025-09-08 16:09:07,424:INFO:Creating metrics dataframe
 2025-09-08 16:09:07,428:INFO:Uploading results into container
@@ -39756,7 +39787,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:07,622:INFO:Importing libraries
 2025-09-08 16:09:07,622:INFO:Copying training dataset
 2025-09-08 16:09:07,635:WARNING:
-2025-09-08 16:09:07,636:WARNING:Processing:  11%|#########6                                                                          | 7/61 [00:00<00:05,  9.86it/s]
+2025-09-08 16:09:07,636:WARNING:
+Processing:  11%|#########6                                                                          | 7/61 [00:00<00:05,  9.86it/s]
 2025-09-08 16:09:07,637:WARNING:[A
 2025-09-08 16:09:07,638:INFO:Defining folds
 2025-09-08 16:09:07,638:INFO:Declaring metric variables
@@ -40050,7 +40082,8 @@ odifier, f"{metric.capitalize()} is", len(result))
 
 2025-09-08 16:09:07,813:INFO:Calculating mean and std
 2025-09-08 16:09:07,814:WARNING:
-2025-09-08 16:09:07,814:WARNING:Processing:  15%|############3                                                                       | 9/61 [00:00<00:05, 10.27it/s]
+2025-09-08 16:09:07,814:WARNING:
+Processing:  15%|############3                                                                       | 9/61 [00:00<00:05, 10.27it/s]
 2025-09-08 16:09:07,814:WARNING:[A
 2025-09-08 16:09:07,814:INFO:Creating metrics dataframe
 2025-09-08 16:09:07,815:INFO:Uploading results into container
@@ -40072,7 +40105,8 @@ odifier, f"{metric.capitalize()} is", len(result))
 2025-09-08 16:09:07,933:INFO:Importing libraries
 2025-09-08 16:09:07,933:INFO:Copying training dataset
 2025-09-08 16:09:07,938:WARNING:
-2025-09-08 16:09:07,938:WARNING:Processing:  18%|##############9                                                                    | 11/61 [00:01<00:04, 11.66it/s]
+2025-09-08 16:09:07,938:WARNING:
+Processing:  18%|##############9                                                                    | 11/61 [00:01<00:04, 11.66it/s]
 2025-09-08 16:09:07,938:WARNING:[A
 2025-09-08 16:09:07,938:INFO:Defining folds
 2025-09-08 16:09:07,938:INFO:Declaring metric variables
@@ -40358,7 +40392,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:09:08,061:INFO:Calculating mean and std
 2025-09-08 16:09:08,061:WARNING:
-2025-09-08 16:09:08,061:WARNING:Processing:  21%|#################6                                                                 | 13/61 [00:01<00:03, 12.82it/s]
+2025-09-08 16:09:08,061:WARNING:
+Processing:  21%|#################6                                                                 | 13/61 [00:01<00:03, 12.82it/s]
 2025-09-08 16:09:08,061:WARNING:[A
 2025-09-08 16:09:08,061:INFO:Creating metrics dataframe
 2025-09-08 16:09:08,062:INFO:Uploading results into container
@@ -40378,7 +40413,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:09:08,182:INFO:Importing libraries
 2025-09-08 16:09:08,182:INFO:Copying training dataset
 2025-09-08 16:09:08,188:WARNING:
-2025-09-08 16:09:08,188:WARNING:Processing:  25%|####################4                                                              | 15/61 [00:01<00:03, 13.62it/s]
+2025-09-08 16:09:08,188:WARNING:
+Processing:  25%|####################4                                                              | 15/61 [00:01<00:03, 13.62it/s]
 2025-09-08 16:09:08,188:WARNING:[A
 2025-09-08 16:09:08,188:INFO:Defining folds
 2025-09-08 16:09:08,188:INFO:Declaring metric variables
@@ -40666,7 +40702,8 @@ rage, modifier, f"{metric.capitalize()} is", len(result))
 
 2025-09-08 16:09:08,323:INFO:Calculating mean and std
 2025-09-08 16:09:08,324:WARNING:
-2025-09-08 16:09:08,324:WARNING:Processing:  28%|#######################1                                                           | 17/61 [00:01<00:03, 13.94it/s]
+2025-09-08 16:09:08,324:WARNING:
+Processing:  28%|#######################1                                                           | 17/61 [00:01<00:03, 13.94it/s]
 2025-09-08 16:09:08,324:WARNING:[A
 2025-09-08 16:09:08,324:INFO:Creating metrics dataframe
 2025-09-08 16:09:08,325:INFO:Uploading results into container
@@ -40690,7 +40727,8 @@ rage, modifier, f"{metric.capitalize()} is", len(result))
 2025-09-08 16:09:08,482:INFO:Importing libraries
 2025-09-08 16:09:08,483:INFO:Copying training dataset
 2025-09-08 16:09:08,497:WARNING:
-2025-09-08 16:09:08,498:WARNING:Processing:  31%|#########################8                                                         | 19/61 [00:01<00:03, 13.09it/s]
+2025-09-08 16:09:08,498:WARNING:
+Processing:  31%|#########################8                                                         | 19/61 [00:01<00:03, 13.09it/s]
 2025-09-08 16:09:08,498:WARNING:[A
 2025-09-08 16:09:08,499:INFO:Defining folds
 2025-09-08 16:09:08,499:INFO:Declaring metric variables
@@ -41086,7 +41124,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:09:08,657:INFO:Calculating mean and std
 2025-09-08 16:09:08,657:WARNING:
-2025-09-08 16:09:08,657:WARNING:Processing:  34%|############################5                                                      | 21/61 [00:01<00:03, 12.91it/s]
+2025-09-08 16:09:08,657:WARNING:
+Processing:  34%|############################5                                                      | 21/61 [00:01<00:03, 12.91it/s]
 2025-09-08 16:09:08,657:WARNING:[A
 2025-09-08 16:09:08,657:INFO:Creating metrics dataframe
 2025-09-08 16:09:08,660:INFO:Uploading results into container
@@ -41507,7 +41546,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:09:08,842:INFO:Calculating mean and std
 2025-09-08 16:09:08,842:WARNING:
-2025-09-08 16:09:08,842:WARNING:Processing:  41%|##################################                                                 | 25/61 [00:01<00:02, 15.89it/s]
+2025-09-08 16:09:08,842:WARNING:
+Processing:  41%|##################################                                                 | 25/61 [00:01<00:02, 15.89it/s]
 2025-09-08 16:09:08,842:WARNING:[A
 2025-09-08 16:09:08,842:INFO:Creating metrics dataframe
 2025-09-08 16:09:08,843:INFO:Uploading results into container
@@ -41529,7 +41569,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:08,952:INFO:Importing libraries
 2025-09-08 16:09:08,952:INFO:Copying training dataset
 2025-09-08 16:09:08,959:WARNING:
-2025-09-08 16:09:08,961:WARNING:Processing:  44%|####################################7                                              | 27/61 [00:02<00:02, 16.17it/s]
+2025-09-08 16:09:08,961:WARNING:
+Processing:  44%|####################################7                                              | 27/61 [00:02<00:02, 16.17it/s]
 2025-09-08 16:09:08,961:WARNING:[A
 2025-09-08 16:09:08,961:INFO:Defining folds
 2025-09-08 16:09:08,961:INFO:Declaring metric variables
@@ -41836,7 +41877,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:09:09,622:INFO:Calculating mean and std
 2025-09-08 16:09:09,623:WARNING:
-2025-09-08 16:09:09,623:WARNING:Processing:  48%|#######################################4                                           | 29/61 [00:02<00:04,  7.53it/s]
+2025-09-08 16:09:09,623:WARNING:
+Processing:  48%|#######################################4                                           | 29/61 [00:02<00:04,  7.53it/s]
 2025-09-08 16:09:09,623:WARNING:[A
 2025-09-08 16:09:09,623:INFO:Creating metrics dataframe
 2025-09-08 16:09:09,625:INFO:Uploading results into container
@@ -41863,7 +41905,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:09:09,758:INFO:Importing libraries
 2025-09-08 16:09:09,758:INFO:Copying training dataset
 2025-09-08 16:09:09,764:WARNING:
-2025-09-08 16:09:09,764:WARNING:Processing:  51%|##########################################1                                        | 31/61 [00:02<00:03,  8.65it/s]
+2025-09-08 16:09:09,764:WARNING:
+Processing:  51%|##########################################1                                        | 31/61 [00:02<00:03,  8.65it/s]
 2025-09-08 16:09:09,764:WARNING:[A
 2025-09-08 16:09:09,764:INFO:Defining folds
 2025-09-08 16:09:09,764:INFO:Declaring metric variables
@@ -42292,7 +42335,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:09:09,894:INFO:Calculating mean and std
 2025-09-08 16:09:09,894:WARNING:
-2025-09-08 16:09:09,894:WARNING:Processing:  54%|############################################9                                      | 33/61 [00:02<00:02,  9.85it/s]
+2025-09-08 16:09:09,894:WARNING:
+Processing:  54%|############################################9                                      | 33/61 [00:02<00:02,  9.85it/s]
 2025-09-08 16:09:09,894:WARNING:[A
 2025-09-08 16:09:09,894:INFO:Creating metrics dataframe
 2025-09-08 16:09:09,895:INFO:Uploading results into container
@@ -42313,7 +42357,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:10,023:INFO:Importing libraries
 2025-09-08 16:09:10,023:INFO:Copying training dataset
 2025-09-08 16:09:10,027:WARNING:
-2025-09-08 16:09:10,028:WARNING:Processing:  57%|###############################################6                                   | 35/61 [00:03<00:02, 10.92it/s]
+2025-09-08 16:09:10,028:WARNING:
+Processing:  57%|###############################################6                                   | 35/61 [00:03<00:02, 10.92it/s]
 2025-09-08 16:09:10,028:WARNING:[A
 2025-09-08 16:09:10,028:INFO:Defining folds
 2025-09-08 16:09:10,028:INFO:Declaring metric variables
@@ -42736,7 +42781,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:09:10,343:INFO:Calculating mean and std
 2025-09-08 16:09:10,343:WARNING:
-2025-09-08 16:09:10,343:WARNING:Processing:  61%|##################################################3                                | 37/61 [00:03<00:02,  9.02it/s]
+2025-09-08 16:09:10,343:WARNING:
+Processing:  61%|##################################################3                                | 37/61 [00:03<00:02,  9.02it/s]
 2025-09-08 16:09:10,343:WARNING:[A
 2025-09-08 16:09:10,343:INFO:Creating metrics dataframe
 2025-09-08 16:09:10,345:INFO:Uploading results into container
@@ -42757,7 +42803,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:10,468:INFO:Importing libraries
 2025-09-08 16:09:10,468:INFO:Copying training dataset
 2025-09-08 16:09:10,475:WARNING:
-2025-09-08 16:09:10,476:WARNING:Processing:  64%|#####################################################                              | 39/61 [00:03<00:02, 10.24it/s]
+2025-09-08 16:09:10,476:WARNING:
+Processing:  64%|#####################################################                              | 39/61 [00:03<00:02, 10.24it/s]
 2025-09-08 16:09:10,476:WARNING:[A
 2025-09-08 16:09:10,476:INFO:Defining folds
 2025-09-08 16:09:10,476:INFO:Declaring metric variables
@@ -43147,7 +43194,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:09:12,924:INFO:Calculating mean and std
 2025-09-08 16:09:12,924:WARNING:
-2025-09-08 16:09:12,924:WARNING:Processing:  67%|#######################################################7                           | 41/61 [00:05<00:08,  2.32it/s]
+2025-09-08 16:09:12,924:WARNING:
+Processing:  67%|#######################################################7                           | 41/61 [00:05<00:08,  2.32it/s]
 2025-09-08 16:09:12,924:WARNING:[A
 2025-09-08 16:09:12,924:INFO:Creating metrics dataframe
 2025-09-08 16:09:12,925:INFO:Uploading results into container
@@ -43175,7 +43223,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:13,049:INFO:Importing libraries
 2025-09-08 16:09:13,049:INFO:Copying training dataset
 2025-09-08 16:09:13,055:WARNING:
-2025-09-08 16:09:13,055:WARNING:Processing:  70%|##########################################################5                        | 43/61 [00:06<00:05,  3.11it/s]
+2025-09-08 16:09:13,055:WARNING:
+Processing:  70%|##########################################################5                        | 43/61 [00:06<00:05,  3.11it/s]
 2025-09-08 16:09:13,055:WARNING:[A
 2025-09-08 16:09:13,055:INFO:Defining folds
 2025-09-08 16:09:13,055:INFO:Declaring metric variables
@@ -43563,7 +43612,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 
 2025-09-08 16:09:13,155:INFO:Calculating mean and std
 2025-09-08 16:09:13,155:WARNING:
-2025-09-08 16:09:13,155:WARNING:Processing:  74%|#############################################################2                     | 45/61 [00:06<00:03,  4.15it/s]
+2025-09-08 16:09:13,155:WARNING:
+Processing:  74%|#############################################################2                     | 45/61 [00:06<00:03,  4.15it/s]
 2025-09-08 16:09:13,155:WARNING:[A
 2025-09-08 16:09:13,155:INFO:Creating metrics dataframe
 2025-09-08 16:09:13,157:INFO:Uploading results into container
@@ -43585,7 +43635,8 @@ ValueError: Target scores need to be probabilities for multiclass roc_auc, i.e. 
 2025-09-08 16:09:13,310:INFO:Importing libraries
 2025-09-08 16:09:13,310:INFO:Copying training dataset
 2025-09-08 16:09:13,319:WARNING:
-2025-09-08 16:09:13,320:WARNING:Processing:  77%|###############################################################9                   | 47/61 [00:06<00:02,  5.16it/s]
+2025-09-08 16:09:13,320:WARNING:
+Processing:  77%|###############################################################9                   | 47/61 [00:06<00:02,  5.16it/s]
 2025-09-08 16:09:13,320:WARNING:[A
 2025-09-08 16:09:13,320:INFO:Defining folds
 2025-09-08 16:09:13,320:INFO:Declaring metric variables
@@ -43886,7 +43937,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:09:13,870:INFO:Calculating mean and std
 2025-09-08 16:09:13,870:WARNING:
-2025-09-08 16:09:13,870:WARNING:Processing:  80%|##################################################################6                | 49/61 [00:06<00:02,  4.58it/s]
+2025-09-08 16:09:13,870:WARNING:
+Processing:  80%|##################################################################6                | 49/61 [00:06<00:02,  4.58it/s]
 2025-09-08 16:09:13,870:WARNING:[A
 2025-09-08 16:09:13,870:INFO:Creating metrics dataframe
 2025-09-08 16:09:13,872:INFO:Uploading results into container
@@ -43913,7 +43965,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:09:14,021:INFO:Importing libraries
 2025-09-08 16:09:14,021:INFO:Copying training dataset
 2025-09-08 16:09:14,029:WARNING:
-2025-09-08 16:09:14,030:WARNING:Processing:  84%|#####################################################################3             | 51/61 [00:07<00:01,  5.66it/s]
+2025-09-08 16:09:14,030:WARNING:
+Processing:  84%|#####################################################################3             | 51/61 [00:07<00:01,  5.66it/s]
 2025-09-08 16:09:14,030:WARNING:[A
 2025-09-08 16:09:14,030:INFO:Defining folds
 2025-09-08 16:09:14,030:INFO:Declaring metric variables
@@ -44220,7 +44273,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 
 2025-09-08 16:09:24,272:INFO:Calculating mean and std
 2025-09-08 16:09:24,273:WARNING:
-2025-09-08 16:09:24,273:WARNING:Processing:  87%|########################################################################1          | 53/61 [00:17<00:13,  1.66s/it]
+2025-09-08 16:09:24,273:WARNING:
+Processing:  87%|########################################################################1          | 53/61 [00:17<00:13,  1.66s/it]
 2025-09-08 16:09:24,273:WARNING:[A
 2025-09-08 16:09:24,273:INFO:Creating metrics dataframe
 2025-09-08 16:09:24,276:INFO:Uploading results into container
@@ -44245,7 +44299,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:09:24,399:INFO:Importing libraries
 2025-09-08 16:09:24,399:INFO:Copying training dataset
 2025-09-08 16:09:24,401:WARNING:
-2025-09-08 16:09:24,401:WARNING:Processing:  90%|##########################################################################8        | 55/61 [00:17<00:07,  1.18s/it]
+2025-09-08 16:09:24,401:WARNING:
+Processing:  90%|##########################################################################8        | 55/61 [00:17<00:07,  1.18s/it]
 2025-09-08 16:09:24,401:WARNING:[A
 2025-09-08 16:09:24,401:INFO:Defining folds
 2025-09-08 16:09:24,402:INFO:Declaring metric variables
@@ -44561,7 +44616,8 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
 2025-09-08 16:09:24,615:INFO:SubProcess create_model() end ==================================
 2025-09-08 16:09:24,615:INFO:Creating metrics dataframe
 2025-09-08 16:09:24,617:WARNING:
-2025-09-08 16:09:24,617:WARNING:Processing:  97%|################################################################################2  | 59/61 [00:17<00:01,  1.51it/s]
+2025-09-08 16:09:24,617:WARNING:
+Processing:  97%|################################################################################2  | 59/61 [00:17<00:01,  1.51it/s]
 2025-09-08 16:09:24,617:WARNING:[A
 2025-09-08 16:09:24,618:WARNING:C:\data_analysis_agent\env\Lib\site-packages\pycaret\internal\pycaret_experiment\supervised_experiment.py:339: FutureWarning: Styler.applymap has been deprecated. Use Styler.map instead.
   .applymap(highlight_cols, subset=["TT (Sec)"])
@@ -44595,10 +44651,12 @@ ValueError: Number of classes in y_true not equal to the number of columns in 'y
                        warm_start=False)
 2025-09-08 16:09:24,813:INFO:create_model() successfully completed......................................
 2025-09-08 16:09:24,880:WARNING:
-2025-09-08 16:09:24,881:WARNING:Processing: 100%|###################################################################################| 61/61 [00:17<00:00,  1.89it/s]
+2025-09-08 16:09:24,881:WARNING:
+Processing: 100%|###################################################################################| 61/61 [00:17<00:00,  1.89it/s]
 2025-09-08 16:09:24,881:WARNING:[A
 2025-09-08 16:09:24,881:WARNING:
-2025-09-08 16:09:24,881:WARNING:                                                                                                                                    
+2025-09-08 16:09:24,881:WARNING:
+                                                                                                                                    
 2025-09-08 16:09:24,881:WARNING:[A
 2025-09-08 16:09:24,915:INFO:_master_model_container: 14
 2025-09-08 16:09:24,916:INFO:_display_container: 2
